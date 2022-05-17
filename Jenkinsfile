@@ -18,11 +18,11 @@ pipeline {
             }
         }  
         stage ("Test") {
-            when {
+           when {
                 branch "PR-*"
             }
             steps {
-                echo "La prueba acabó bien"
+                sh "bash test.sh"
             }
         }
     }
